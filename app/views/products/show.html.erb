@@ -1,3 +1,15 @@
+<%= render @product %>
+
+<h3>Start Price: <%= @product.start_price %></h3>
+<h3>End Price: <%= @product.end_price %></h3>
+<h3>Current Price: <%= @product.current_price %></h3>
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="<%= @product.end_price.to_f / @product.current_price.to_f * 100 %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @product.end_price.to_f / @product.current_price.to_f * 100 %>%;">
+    - <%= (@product.end_price.to_f / @product.current_price.to_f * 100).to_i %> %
+  </div>
+</div>
+
+<% unless @product.current_price == @product.end_price %>
 <%= form_tag buy_path(slug: @product.slug) do %>
   <script src="https://checkout.stripe.com/v2/checkout.js"
     class="stripe-button"
@@ -5,3 +17,8 @@
     data-description="<%= @product.name %>"
     data-amount="<%= @product.current_price %>"></script>
 <% end %>
+<% end %>
+
+<%= link_to "Edit Product", edit_product_path(@product) %>
+
+<%= link_to "Back", :back %>

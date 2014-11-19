@@ -1,0 +1,25 @@
+
+
+<table class="table">
+      <caption>Products</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>HTML</th>
+          <th>Start Price</th>
+          <th>End Price</th>
+          <th>Units</th>
+          <th>End Date</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @products %>
+      </tbody>
+    </table>
+
+ 
+<%= link_to "New Product", new_product_path %>

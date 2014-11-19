@@ -1,0 +1,13 @@
+<tr>
+	<td><%= product.id %></td>
+	<td><%= link_to product.name, product_path(product) %></td>
+	<td><%= product.description %></td>
+	<td><%= product.html %></td>
+	<td><%= product.start_price %></td>
+	<td><%= product.end_price %></td>
+	<td><%= product.units %></td>
+	<td><%= product.end_date %></td>
+	<td><%= link_to "Destroy", product_path(product), method: :delete %>
+	<td><%= link_to "Edit", edit_product_path(product) %>
+</tr>
+

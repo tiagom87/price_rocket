@@ -7,7 +7,8 @@ class Product < ActiveRecord::Base
 	validates_numericality_of :end_price, greater_than: 49, message: "must be at least 50 cents"
 
 	def current_price
-		discount = (end_price - start_price).to_f / units
-		start_price - (self.sales.size.to_f * discount)
+		discount = (start_price - end_price).to_f / units
+		final = start_price - (self.sales.size.to_f * discount)
+		return final.to_i
 	end
 end

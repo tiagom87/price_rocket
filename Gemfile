@@ -56,4 +56,4 @@ gem 'stripe', '~> 1.8.3'
 
 gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
-
+gem 'font-awesome-rails'

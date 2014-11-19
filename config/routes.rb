@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   resources :products
-  post'/buy/:permalink',to:'transactions#create', as: :buy
+  post'/buy/:slug',to:'transactions#create', as: :buy
   get'/success/:guid', to:'transactions#success', as: :success
 
   # The priority is based upon order of creation: first created -> highest priority.
