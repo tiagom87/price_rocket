@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  html: MyText
+  start_price: 1
+  end_price: 1
+  units: 1
+  slug: MyString
+
+two:
+  name: MyString
+  description: MyText
+  html: MyText
+  start_price: 1
+  end_price: 1
+  units: 1
+  slug: MyString
